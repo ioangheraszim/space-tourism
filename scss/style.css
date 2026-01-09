@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--barlow);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+  min-height: 100vh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+}
+
+.container {
+  width: min(100%, 23.4375rem);
+  margin-inline: auto;
+}
+@media (min-width: 48em) {
+  .container {
+    width: min(100%, 48rem);
+  }
+}
+@media (min-width: 90em) {
+  .container {
+    width: min(100%, 90rem);
+  }
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../assets/fonts/Barlow/Barlow-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url(../assets/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bellefair";
+  src: url(../assets/fonts/Bellefair/Bellefair-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --bellefair: "Bellefair", sans-serif;
+  --barlow-condensed: "Barlow Condensed", sans-serif;
+  --barlow: "Barlow", sans-serif;
+  --fs-1000: 62.5rem;
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+}
+
+:root {
+  --spacing-1600: 8rem;
+  --spacing-1200: 6rem;
+  --spacing-1000: 5rem;
+  --spacing-800: 4rem;
+  --spacing-600: 3rem;
+  --spacing-500: 2.5rem;
+  --spacing-400: 2rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-100: 0.75rem;
+  --spacing-50: 0.5rem;
+  --spacing-250: 0.125rem;
+}
+
+header {
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */

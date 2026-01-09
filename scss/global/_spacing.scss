@@ -1,0 +1,16 @@
+@use "../util/" as u;
+
+:root {
+  --spacing-1600: #{u.rem(128)};
+  --spacing-1200: #{u.rem(96)};
+  --spacing-1000: #{u.rem(80)};
+  --spacing-800: #{u.rem(64)};
+  --spacing-600: #{u.rem(48)};
+  --spacing-500: #{u.rem(40)};
+  --spacing-400: #{u.rem(32)};
+  --spacing-300: #{u.rem(24)};
+  --spacing-200: #{u.rem(16)};
+  --spacing-100: #{u.rem(12)};
+  --spacing-50: #{u.rem(8)};
+  --spacing-250: #{u.rem(2)};
+}

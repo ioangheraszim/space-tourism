@@ -1,0 +1,4 @@
+@use "../util/" as u;
+header {
+  font-size: u.rem(32);
+}

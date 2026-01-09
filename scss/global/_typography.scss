@@ -1,0 +1,40 @@
+@use "../util/" as u;
+
+@font-face {
+  font-family: "Barlow";
+  src: url(../assets/fonts/Barlow/Barlow-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url(../assets/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf)
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bellefair";
+  src: url(../assets/fonts/Bellefair/Bellefair-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  // Font families
+  --bellefair: "Bellefair", sans-serif;
+  --barlow-condensed: "Barlow Condensed", sans-serif;
+  --barlow: "Barlow", sans-serif;
+
+  --fs-1000: #{u.rem(1000)};
+  --fs-900: #{u.rem(150)};
+  --fs-800: #{u.rem(100)};
+  --fs-700: #{u.rem(56)};
+  --fs-600: #{u.rem(32)};
+  --fs-500: #{u.rem(28)};
+  --fs-400: #{u.rem(18)};
+  --fs-300: #{u.rem(16)};
+  --fs-200: #{u.rem(14)};
+}
