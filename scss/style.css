@@ -130,6 +130,18 @@ a {
   --fs-200: 0.875rem;
 }
 
+.text-dark {
+  color: var(--clr-dark);
+}
+
+.text-accent {
+  color: var(--clr-light);
+}
+
+.text-white {
+  color: var(--clr-white);
+}
+
 :root {
   --spacing-1600: 8rem;
   --spacing-1200: 6rem;
@@ -143,6 +155,10 @@ a {
   --spacing-100: 0.75rem;
   --spacing-50: 0.5rem;
   --spacing-250: 0.125rem;
+}
+
+.flow > * + * {
+  margin-top: 1rem;
 }
 
 header {

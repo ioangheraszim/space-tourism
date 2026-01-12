@@ -38,3 +38,15 @@
   --fs-300: #{u.rem(16)};
   --fs-200: #{u.rem(14)};
 }
+
+.text-dark {
+  color: var(--clr-dark);
+}
+
+.text-accent {
+  color: var(--clr-light);
+}
+
+.text-white {
+  color: var(--clr-white);
+}

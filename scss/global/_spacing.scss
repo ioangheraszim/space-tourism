@@ -14,3 +14,8 @@
   --spacing-50: #{u.rem(8)};
   --spacing-250: #{u.rem(2)};
 }
+
+// select everything except the first child of element
+.flow > * + * {
+  margin-top: u.rem(16);
+}
