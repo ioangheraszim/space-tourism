@@ -173,7 +173,7 @@ header {
   font-size: 2rem;
 }
 
-.large-button {
+.button--large {
   position: relative;
   display: grid;
   z-index: 1;
@@ -184,7 +184,7 @@ header {
   text-decoration: none;
 }
 
-.large-button::after {
+.button--large::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -196,8 +196,8 @@ header {
   transition: opacity 500ms linear, transform 750ms ease-in-out;
 }
 
-.large-button:hover::after,
-.large-button:focus::after {
+.button--large:hover::after,
+.button--large:focus::after {
   opacity: 1;
   transform: scale(1.5);
 }/*# sourceMappingURL=style.css.map */
