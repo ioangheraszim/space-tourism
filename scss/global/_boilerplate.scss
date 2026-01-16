@@ -1,3 +1,5 @@
+@use "../util/" as u;
+
 *,
 *::before,
 *::after {
@@ -23,6 +25,18 @@ body {
   color: #{hsl(var(--clr-white))};
   background-color: #{hsl(var(--clr-dark))};
   min-height: 100vh;
+  background-image: url(../../assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+
+  @include u.breakpoint(tablet) {
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+  }
+
+  @include u.breakpoint(desktop) {
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+  }
 }
 
 img,
@@ -69,6 +83,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #{hsl(var(--clr-white))};
 }
 
 #root,

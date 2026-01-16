@@ -22,6 +22,20 @@ body {
   color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-dark));
   min-height: 100vh;
+  background-image: url(../../assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+@media (min-width: 48em) {
+  body {
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+  }
+}
+@media (min-width: 90em) {
+  body {
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+  }
 }
 
 img,
@@ -69,6 +83,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: hsl(var(--clr-white));
 }
 
 #root,
@@ -83,17 +98,17 @@ a {
 }
 
 .container {
-  width: min(100%, 23.4375rem);
+  width: min(100% - 1.5rem, 23.4375rem);
   margin-inline: auto;
 }
 @media (min-width: 48em) {
   .container {
-    width: min(100%, 48rem);
+    width: min(100% - 1.5rem, 48rem);
   }
 }
 @media (min-width: 90em) {
   .container {
-    width: min(100%, 90rem);
+    width: min(100% - 1.5rem, 90rem);
   }
 }
 
@@ -139,15 +154,19 @@ a {
 }
 
 .text-dark {
-  color: var(--clr-dark);
+  color: hsl(var(--clr-dark));
 }
 
 .text-accent {
-  color: var(--clr-light);
+  color: hsl(var(--clr-light));
 }
 
 .text-white {
-  color: var(--clr-white);
+  color: hsl(var(--clr-white));
+}
+
+.u-uppercase {
+  text-transform: uppercase;
 }
 
 :root {
@@ -170,7 +189,7 @@ a {
 }
 
 header {
-  font-size: 2rem;
+  margin: 2.5rem 0;
 }
 
 .button--large {
@@ -200,4 +219,55 @@ header {
 .button--large:focus::after {
   opacity: 1;
   transform: scale(1.5);
+}
+
+.btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.btn-close {
+  margin-bottom: 3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 75%;
+  background-color: hsl(var(--clr-light)/10%);
+  -webkit-backdrop-filter: blur(0.75rem);
+          backdrop-filter: blur(0.75rem);
+  transform: translateX(100%);
+  transition: transform 300ms ease-out;
+}
+.nav__list.is-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in;
+}
+.nav__item {
+  padding: 2rem 0rem;
+}
+.nav__item:first-child {
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: 1.75rem;
+}
+.nav__link {
+  display: block;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: var(--fs-300);
+}
+.nav__link:hover {
+  border-right: 2px solid hsl(var(--clr-white));
 }/*# sourceMappingURL=style.css.map */

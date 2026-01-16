@@ -15,10 +15,17 @@
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body>
-    <header class="container">
+    <header class="container header">
       <nav class="nav">
-        <img class="nav__logo" src="./assets/shared/logo.svg" alt="" />
-        <ul class="nav__list">
+        <a href="/"
+          ><img class="nav__logo" src="./assets/shared/logo.svg" alt=""
+        /></a>
+        <ul class="nav__list u-uppercase">
+          <li class="nav__item">
+            <button class="btn btn-close">
+              <img src="./assets/shared/icon-close.svg" alt="" />
+            </button>
+          </li>
           <li class="nav__item">
             <a class="nav__link" href="/"><span>00</span> Home</a>
           </li>
@@ -38,14 +45,17 @@
             >
           </li>
         </ul>
+        <button class="btn btn-open">
+          <img src="./assets/shared/icon-hamburger.svg" alt="" />
+        </button>
       </nav>
     </header>
     <main class="container">
       <section class="hero">
         <div class="hero__content">
-          <h2 class="">So, you want to travel to</h2>
-          <h1 class="">SPACE</h1>
-          <p class="">
+          <h2 class="hero__subtitle">So, you want to travel to</h2>
+          <h1 class="hero__title">SPACE</h1>
+          <p class="hero__text">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this
@@ -53,7 +63,7 @@
           </p>
         </div>
         <div class="hero__btn">
-          <a href="" class="">Explore</a>
+          <a href="./destination.html" class="">Explore</a>
         </div>
       </section>
     </main>

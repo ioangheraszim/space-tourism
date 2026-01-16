@@ -1,0 +1,48 @@
+@use "../util/" as u;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 75%;
+    //   the glassness
+    background-color: #{hsl(var(--clr-light) / 10%)};
+    backdrop-filter: blur(u.rem(12));
+    transform: translateX(100%);
+    transition: transform 300ms ease-out;
+  }
+
+  &__list.is-active {
+    transform: translateX(0);
+    transition: transform 300ms ease-in;
+  }
+
+  &__item {
+    padding: u.rem(32) u.rem(0);
+  }
+
+  &__item:first-child {
+    margin-left: auto;
+    margin-right: u.rem(16);
+    margin-top: u.rem(28);
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding-left: u.rem(16);
+    font-size: var(--fs-300);
+  }
+
+  &__link:hover {
+    border-right: 2px solid #{hsl(var(--clr-white))};
+  }
+}

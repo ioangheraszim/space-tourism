@@ -1,4 +1,5 @@
 @use "../util/" as u;
+
 header {
-  font-size: u.rem(32);
+  margin: u.rem(40) 0;
 }

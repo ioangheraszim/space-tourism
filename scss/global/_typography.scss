@@ -39,14 +39,20 @@
   --fs-200: #{u.rem(14)};
 }
 
+// Utilities
+
 .text-dark {
-  color: var(--clr-dark);
+  color: #{hsl(var(--clr-dark))};
 }
 
 .text-accent {
-  color: var(--clr-light);
+  color: #{hsl(var(--clr-light))};
 }
 
 .text-white {
-  color: var(--clr-white);
+  color: #{hsl(var(--clr-white))};
+}
+
+.u-uppercase {
+  text-transform: uppercase;
 }

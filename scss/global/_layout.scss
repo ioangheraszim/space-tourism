@@ -1,15 +1,15 @@
 @use "../util/" as u;
 
 .container {
-  width: min(100%, u.rem(375));
+  width: min(100% - u.rem(24), u.rem(375));
   margin-inline: auto;
 
   @include u.breakpoint(tablet) {
-    width: min(100%, u.rem(768));
+    width: min(100% - u.rem(24), u.rem(768));
   }
 
   @include u.breakpoint(desktop) {
-    width: min(100%, u.rem(1440));
+    width: min(100% - u.rem(24), u.rem(1440));
   }
 }
 
