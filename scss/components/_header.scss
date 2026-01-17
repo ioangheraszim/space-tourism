@@ -2,4 +2,8 @@
 
 header {
   margin: u.rem(40) 0;
+
+  @include u.breakpoint(tablet) {
+    margin: auto;
+  }
 }

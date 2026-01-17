@@ -1,0 +1,47 @@
+@use "../util/" as u;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: u.rem(32);
+  margin: u.rem(24);
+
+  @include u.breakpoint(tablet) {
+    padding: 0 u.rem(72);
+    margin: u.rem(128) u.rem(40);
+  }
+
+  @include u.breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, u.rem(250));
+    grid-template-areas:
+      ". ."
+      "content btn";
+
+    margin: u.rem(100);
+    text-align: start;
+    padding: 0;
+  }
+
+  &__content {
+    grid-area: content;
+  }
+
+  &__btn {
+    background-color: #{hsl(var(--clr-white))};
+    border-radius: 100%;
+    width: 50%;
+
+    @include u.breakpoint(desktop) {
+      margin-left: auto;
+      grid-area: btn;
+    }
+  }
+
+  &__title {
+    margin: u.rem(24) 0;
+  }
+}

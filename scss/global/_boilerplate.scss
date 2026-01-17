@@ -28,7 +28,6 @@ body {
   background-image: url(../../assets/home/background-home-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden;
 
   @include u.breakpoint(tablet) {
     background-image: url(../../assets/home/background-home-tablet.jpg);

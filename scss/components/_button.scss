@@ -1,16 +1,26 @@
 @use "../util/" as u;
-.button--large {
+
+.btn-cta {
   position: relative;
   display: grid;
   z-index: 1;
   place-items: center;
-  padding: 0 2em;
+  padding: 0;
   border-radius: 50%;
   aspect-ratio: 1;
   text-decoration: none;
+  color: #{hsl(var(--clr-dark))};
+  font-family: var(--bellefair);
+  text-transform: uppercase;
+  font-size: u.rem(18);
+  font-size: clamp(
+    u.rem(18),
+    0.8169014084507042rem + 1.3145539906103285vw,
+    u.rem(32)
+  );
 }
 
-.button--large::after {
+.btn-cta::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -19,11 +29,13 @@
   background: hsl(var(--clr-white) / 0.15);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 500ms linear, transform 750ms ease-in-out;
+  transition:
+    opacity 500ms linear,
+    transform 750ms ease-in-out;
 }
 
-.button--large:hover::after,
-.button--large:focus::after {
+.btn-cta:hover::after,
+.btn-cta:focus::after {
   opacity: 1;
   transform: scale(1.5);
 }
@@ -32,6 +44,12 @@
   cursor: pointer;
   background: transparent;
   border: none;
+}
+
+.btn-open {
+  @include u.breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .btn-close {
