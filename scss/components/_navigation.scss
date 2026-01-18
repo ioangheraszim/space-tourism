@@ -73,6 +73,7 @@
   &__item {
     padding: u.rem(32) u.rem(0);
     position: relative;
+
     @include u.breakpoint(tablet) {
       &:hover::after {
         content: "";

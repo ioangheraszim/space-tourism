@@ -162,8 +162,13 @@ a {
   text-transform: uppercase;
 }
 
-.text-center {
+.text-align {
   text-align: center;
+}
+@media (min-width: 48em) {
+  .text-align {
+    text-align: start;
+  }
 }
 
 .subheading {
@@ -203,6 +208,7 @@ a {
 .page-index {
   font-size: 1rem;
   font-size: clamp(1rem, 0.735915493rem + 1.1267605634vw, 1.75rem);
+  color: hsl(var(--clr-light)/25%);
 }
 
 :root {
