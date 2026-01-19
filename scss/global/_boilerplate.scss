@@ -25,17 +25,6 @@ body {
   color: #{hsl(var(--clr-white))};
   background-color: #{hsl(var(--clr-dark))};
   min-height: 100vh;
-  background-image: url(../../assets/home/background-home-mobile.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @include u.breakpoint(tablet) {
-    background-image: url(../../assets/home/background-home-tablet.jpg);
-  }
-
-  @include u.breakpoint(desktop) {
-    background-image: url(../../assets/home/background-home-desktop.jpg);
-  }
 }
 
 img,
@@ -88,4 +77,62 @@ a {
 #root,
 #__next {
   isolation: isolate;
+}
+
+// background utilities
+
+.background--home {
+  background-image: url(../../assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include u.breakpoint(tablet) {
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+  }
+
+  @include u.breakpoint(desktop) {
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+  }
+}
+
+.background--destination {
+  background-image: url(../../assets/destination/background-destination-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include u.breakpoint(tablet) {
+    background-image: url(../../assets/destination/background-destination-tablet.jpg);
+  }
+
+  @include u.breakpoint(desktop) {
+    background-image: url(../../assets/destination/background-destination-desktop.jpg);
+  }
+}
+
+.background--crew {
+  background-image: url(../../assets/crew/background-crew-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include u.breakpoint(tablet) {
+    background-image: url(../../assets/crew/background-crew-tablet.jpg);
+  }
+
+  @include u.breakpoint(desktop) {
+    background-image: url(../../assets/crew/background-crew-desktop.jpg);
+  }
+}
+
+.background--tech {
+  background-image: url(../../assets/technology/background-technology-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include u.breakpoint(tablet) {
+    background-image: url(../../assets/technology/background-technology-tablet.jpg);
+  }
+
+  @include u.breakpoint(desktop) {
+    background-image: url(../../assets/technology/background-technology-desktop.jpg);
+  }
 }

@@ -94,3 +94,19 @@
   background: #{hsl(var(--clr-white) / 50%)};
   transform: translateX(-50%);
 }
+
+.btn--pills {
+  width: u.rem(10);
+  height: u.rem(10);
+  border-radius: 50%;
+  background-color: #{hsl(var(--clr-white) / 50%)};
+
+  @include u.breakpoint(tablet) {
+    width: u.rem(16);
+    height: u.rem(15);
+  }
+}
+
+.btn--pills.is-active {
+  background-color: #{hsl(var(--clr-white))};
+}

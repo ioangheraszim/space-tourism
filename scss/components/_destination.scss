@@ -1,7 +1,11 @@
 @use "../util/" as u;
 
 .destination {
-  padding: u.rem(24);
+  padding: u.rem(24) 0;
+
+  @include u.breakpoint(desktop) {
+    margin: u.rem(40) u.rem(95);
+  }
 
   &__content {
     display: flex;
@@ -13,6 +17,7 @@
     @include u.breakpoint(desktop) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      height: u.rem(750);
     }
 
     gap: u.rem(32);
@@ -20,13 +25,12 @@
 
   &__image {
     width: 50%;
+    img {
+      margin-inline: auto;
+    }
 
     @include u.breakpoint(desktop) {
       width: 100%;
-    }
-
-    img {
-      margin-inline: auto;
     }
   }
 
