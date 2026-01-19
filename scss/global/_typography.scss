@@ -42,6 +42,7 @@
 
 // Utilities
 
+// Colors
 .text-dark {
   color: #{hsl(var(--clr-dark))};
 }
@@ -54,19 +55,29 @@
   color: #{hsl(var(--clr-white))};
 }
 
+// transforms
 .u-uppercase {
   text-transform: uppercase;
 }
 
-.text-align {
+// alignment
+.u-align-center-desktop {
   text-align: center;
+  @include u.breakpoint(desktop) {
+    text-align: start;
+  }
+}
 
+.u-align-center-mobile {
+  text-align: center;
   @include u.breakpoint(tablet) {
     text-align: start;
   }
 }
 
+// General
 .subheading {
+  margin: u.rem(24) 0;
   font-family: var(--barlow-condensed);
   letter-spacing: u.rem(4);
   text-transform: uppercase;
@@ -100,12 +111,15 @@
   line-height: 180%;
 }
 
+// indexes
 .nav-index,
 .page-index {
   font-weight: 700;
   font-size: u.rem(16);
-  @include u.breakpoint(desktop) {
-    padding: 0 u.rem(8);
+  padding: u.rem(8);
+
+  @include u.breakpoint(tablet) {
+    padding-right: u.rem(8);
   }
 }
 

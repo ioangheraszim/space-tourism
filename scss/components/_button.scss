@@ -1,5 +1,6 @@
 @use "../util/" as u;
 
+// cta button
 .btn-cta {
   position: relative;
   display: grid;
@@ -40,18 +41,56 @@
   transform: scale(1.5);
 }
 
+// general button
 .btn {
   cursor: pointer;
   background: transparent;
   border: none;
 }
 
+// button open navbar
 .btn-open {
   @include u.breakpoint(tablet) {
     display: none;
   }
 }
 
+// button close navbar
 .btn-close {
   margin-bottom: u.rem(48);
+}
+
+// button tabs
+.btn--tab {
+  color: #{hsl(var(--clr-light))};
+  padding: u.rem(16);
+  position: relative;
+  font-size: u.rem(14);
+  font-size: clamp(
+    u.rem(14),
+    0.8309859154929577rem + 0.18779342723004694vw,
+    u.rem(16)
+  );
+}
+
+.btn--tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 75%;
+  height: 2px;
+  background: #{hsl(var(--clr-white))};
+  transform: translateX(-50%);
+}
+
+.btn--tab:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 75%;
+  height: 2px;
+  background: #{hsl(var(--clr-white) / 50%)};
+  transform: translateX(-50%);
 }

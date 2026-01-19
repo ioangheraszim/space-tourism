@@ -1,0 +1,70 @@
+@use "../util/" as u;
+
+.destination {
+  padding: u.rem(24);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: u.rem(32);
+
+    @include u.breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    gap: u.rem(32);
+  }
+
+  &__image {
+    width: 50%;
+
+    @include u.breakpoint(desktop) {
+      width: 100%;
+    }
+
+    img {
+      margin-inline: auto;
+    }
+  }
+
+  &__info {
+    @include u.breakpoint(tablet) {
+      padding: u.rem(12) u.rem(70);
+    }
+  }
+
+  &__tabs {
+    position: relative;
+    margin-bottom: u.rem(40);
+  }
+
+  &__divider {
+    background-color: #{hsl(var(--clr-light) / 25%)};
+    height: 2px;
+    margin: u.rem(24) 0;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(24);
+    @include u.breakpoint(tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    @include u.breakpoint(desktop) {
+      align-items: start;
+      justify-content: space-between;
+    }
+  }
+
+  &__stat-value {
+    font-family: var(--bellefair);
+    font-size: u.rem(28);
+  }
+}
