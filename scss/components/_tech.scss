@@ -1,0 +1,58 @@
+@use "../util/" as u;
+
+.tech {
+  margin: u.rem(24) 0;
+  @include u.breakpoint(desktop) {
+    padding-left: u.rem(100);
+  }
+
+  &__content {
+    // content
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include u.breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__info {
+    // info
+    @include u.breakpoint(desktop) {
+      display: flex;
+      align-items: center;
+      gap: u.rem(64);
+    }
+  }
+
+  &__btn {
+    // buttons
+    margin: u.rem(32) 0 u.rem(40) 0;
+    display: flex;
+    justify-content: center;
+    gap: u.rem(16);
+
+    @include u.breakpoint(desktop) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    // text
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(16);
+  }
+
+  &__term {
+    color: #{hsl(var(--clr-white) / 50%)};
+  }
+
+  &__img {
+    margin-left: auto;
+    img {
+      margin-inline: auto;
+    }
+  }
+}

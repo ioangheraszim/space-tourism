@@ -90,7 +90,7 @@
 .heading--lg,
 .heading--m,
 .category,
-.terminology {
+.btn--paging {
   font-family: var(--bellefair);
   font-weight: 400;
 }
@@ -109,14 +109,6 @@
 
 .category {
   font-size: clamp(u.rem(18), u.rem(13) + 1.3145539906103285vw, u.rem(32));
-}
-
-.terminology {
-  font-size: clamp(
-    u.rem(18),
-    0.28873239436619724rem + 3.568075117370892vw,
-    u.rem(56)
-  );
 }
 
 .body {

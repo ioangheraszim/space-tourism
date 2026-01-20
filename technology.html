@@ -56,20 +56,20 @@
     </header>
     <main class="container">
       <section class="tech">
-        <h2 class="tech__heading subheading text-align">
+        <h2 class="tech__heading subheading u-align-center-mobile">
           <span class="page-index">03</span>Space launch 101
         </h2>
-        <div class="tech__content">
+        <div class="tech__content u-align-center-desktop">
           <div class="tech__info">
             <div class="tech__btn">
-              <button>01</button>
-              <button>02</button>
-              <button>03</button>
+              <button class="btn btn--paging is-active">1</button>
+              <button class="btn btn--paging">2</button>
+              <button class="btn btn--paging">3</button>
             </div>
             <div class="tech__text">
-              <h2 class="tech__term">The Terminology</h2>
-              <h1 class="tech__head">Launch Vechicle</h1>
-              <p class="tech__body body">
+              <h2 class="tech__term u-uppercase category">The Terminology</h2>
+              <h1 class="tech__head u-uppercase heading--m">Launch Vechicle</h1>
+              <p class="tech__body body text-accent">
                 A launch vehicle or carrier rocket is a rocket-propelled vehicle
                 used to carry a payload from Earth's surface to space, usually
                 to Earth orbit or beyond. Our WEB-X carrier rocket is the most
@@ -82,11 +82,17 @@
             <figure class="">
               <picture>
                 <source
-                  media="(min-width: 768px)"
+                  media="(min-width: 1440px)"
                   srcset="./assets/technology/image-launch-vehicle-portrait.jpg"
                 />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./assets/technology/image-launch-vehicle-landscape.jpg
+                  "
+                />
                 <img
-                  src="./assets/technology/image-launch-vehicle-landscape.jpg"
+                  src="./assets/technology/image-launch-vehicle-portrait.jpg"
                   alt=""
                 />
               </picture>

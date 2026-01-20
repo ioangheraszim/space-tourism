@@ -6,11 +6,11 @@
 
   @include u.breakpoint(tablet) {
     width: min(100%, u.rem(768));
-    padding-left: u.rem(16);
+    padding-inline: u.rem(16);
   }
 
   @include u.breakpoint(desktop) {
     width: min(100%, u.rem(1440));
-    padding-left: u.rem(32);
+    padding-inline: u.rem(32);
   }
 }
