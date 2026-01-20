@@ -14,6 +14,19 @@ btnClose.addEventListener("click", () => {
   navList.classList.remove("is-active");
 });
 
+// Highlight active nav link
+const navLinks = document.querySelectorAll(".nav__link");
+const current = window.location.pathname.split("/").pop() || "index.html";
+
+navLinks.forEach((link) => {
+  const linkFile = link.getAttribute("href").replace("./", "");
+
+  if (linkFile === current) {
+    link.parentElement.classList.add("active");
+    link.setAttribute("aria-current", "page");
+  }
+});
+
 // fetching data
 async function init() {
   const res = await fetch("./data.json");
@@ -64,8 +77,7 @@ function initDestination(data) {
     statLabels[1].textContent = "Est. travel time";
     statValues[1].textContent = myData.travel;
 
-    // animations
-
+    // Remove animation classes
     destinationTitle.classList.remove("fade-in");
     destinationText.classList.remove("fade-in");
     statLabels.forEach((label) => label.classList.remove("fade-in"));
@@ -73,7 +85,7 @@ function initDestination(data) {
     destinationImg.classList.remove("fade-in");
 
     void destinationImg.offsetWidth;
-
+    // Add animation classes
     destinationTitle.classList.add("fade-in");
     destinationText.classList.add("fade-in");
     statLabels.forEach((label) => label.classList.add("fade-in"));
@@ -101,15 +113,14 @@ function initCrew(data) {
     crewBio.textContent = myData.bio;
     crewPic.src = myData.images.webp;
 
-    // animations
-
+    // Remove animation classes
     crewName.classList.remove("fade-left");
     crewCategory.classList.remove("fade-left");
     crewBio.classList.remove("fade-left");
     crewPic.classList.remove("fade-in");
 
     void crewPic.offsetWidth;
-
+    // Add animation classes
     crewName.classList.add("fade-left");
     crewCategory.classList.add("fade-left");
     crewBio.classList.add("fade-left");
@@ -154,7 +165,6 @@ function initTech(data) {
     techBio.classList.remove("fade-top");
     img.classList.remove("fade-in");
 
-    // Force reflow (IMPORTANT)
     void img.offsetWidth;
 
     // Add animation classes

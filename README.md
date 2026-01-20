@@ -18,18 +18,18 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 Users should be able to:
 
-- View the optimal layout for each of the website's pages depending on their device's screen size
-- See hover states for all interactive elements on the page
-- View each page and be able to toggle between the tabs to see new information
+- View the optimal layout for each of the website's pages depending on their device's screen size ✅
+- See hover states for all interactive elements on the page ✅
+- View each page and be able to toggle between the tabs to see new information ✅
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot/screenshot.gif)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://github.com/ioangheraszim/space-tourism)
+- Live Site URL: [Live site URL here](https://ioangheraszim.github.io/space-tourism)
 
 ## My process
 
@@ -42,17 +42,7 @@ Users should be able to:
 - SCSS
 - Mobile-first workflow
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/ioangheraszim)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- Website - [Ioan gheraszim](https://ioangheraszim.github.io/portofolio/)
+- Frontend Mentor - [@ioangheraszim](https://www.frontendmentor.io/profile/ioangheraszim)
