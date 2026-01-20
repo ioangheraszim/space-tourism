@@ -15,49 +15,65 @@
   </head>
   <body class="background--crew">
     <header class="container header">
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary navigation">
         <div class="nav__logo-container">
-          <a href="/"
-            ><img class="nav__logo" src="./assets/shared/logo.svg" alt=""
-          /></a>
-          <div class="nav__line"></div>
+          <a href="/" aria-label="Homepage">
+            <img
+              class="nav__logo"
+              src="./assets/shared/logo.svg"
+              alt="Space Tourism logo"
+            />
+          </a>
+          <div class="nav__line" aria-hidden="true"></div>
         </div>
-        <ul class="nav__list u-uppercase">
-          <li class="nav__item">
-            <button class="btn btn-close">
-              <img src="./assets/shared/icon-close.svg" alt="" />
+        <ul class="nav__list u-uppercase" role="menubar">
+          <li class="nav__item" role="none">
+            <button class="btn btn-close" aria-label="Close navigation menu">
+              <img
+                src="./assets/shared/icon-close.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="/"
-              ><span class="nav-index">00</span> Home</a
-            >
+          <li class="nav__item" role="none">
+            <a class="nav__link" href="/" role="menuitem" aria-current="page">
+              <span class="nav-index" aria-hidden="true">00</span> Home
+            </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="./destination.html"
-              ><span class="nav-index">01</span> Destination</a
-            >
+          <li class="nav__item" role="none">
+            <a class="nav__link" href="./destination.html" role="menuitem">
+              <span class="nav-index" aria-hidden="true">01</span> Destination
+            </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="/crew.html"
-              ><span class="nav-index">02</span> Crew</a
-            >
+          <li class="nav__item" role="none">
+            <a class="nav__link" href="/crew.html" role="menuitem">
+              <span class="nav-index" aria-hidden="true">02</span> Crew
+            </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="/technology.html"
-              ><span class="nav-index">03</span> Technology</a
-            >
+          <li class="nav__item" role="none">
+            <a class="nav__link" href="/technology.html" role="menuitem">
+              <span class="nav-index" aria-hidden="true">03</span> Technology
+            </a>
           </li>
         </ul>
-        <button class="btn btn-open">
-          <img src="./assets/shared/icon-hamburger.svg" alt="" />
+        <button class="btn btn-open" aria-label="Open navigation menu">
+          <img
+            src="./assets/shared/icon-hamburger.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </button>
       </nav>
     </header>
     <main class="container">
-      <section class="crew">
-        <h2 class="crew__subheading subheading u-align-center-mobile">
-          <span class="page-index">02</span>Meet your crew
+      <section class="crew" aria-labelledby="crew-heading">
+        <h2
+          id="crew-heading"
+          class="crew__subheading subheading u-align-center-mobile"
+        >
+          <span class="page-index" aria-hidden="true">02</span>
+          Meet your crew
         </h2>
         <div class="crew__wrap">
           <div class="crew__content">
@@ -67,21 +83,45 @@
               <p class="crew__body body text-accent">
                 Douglas Gerald Hurley is an American engineer, former Marine
                 Corps pilot and former NASA astronaut. He launched into space
-                for the third time as commander of Crew Dragon Demo-2.
+                for the third time as commander of Crew Dragon Demo‑2.
               </p>
             </div>
-            <div class="crew__indicators">
-              <button class="btn btn--pills is-active"></button>
-              <button class="btn btn--pills"></button>
-              <button class="btn btn--pills"></button>
-              <button class="btn btn--pills"></button>
+            <div
+              class="crew__indicators"
+              role="tablist"
+              aria-label="Crew member selector"
+            >
+              <button
+                class="btn btn--pills is-active"
+                role="tab"
+                aria-selected="true"
+                aria-label="Crew member 1"
+              ></button>
+              <button
+                class="btn btn--pills"
+                role="tab"
+                aria-selected="false"
+                aria-label="Crew member 2"
+              ></button>
+              <button
+                class="btn btn--pills"
+                role="tab"
+                aria-selected="false"
+                aria-label="Crew member 3"
+              ></button>
+              <button
+                class="btn btn--pills"
+                role="tab"
+                aria-selected="false"
+                aria-label="Crew member 4"
+              ></button>
             </div>
           </div>
           <div class="crew__image">
             <img
               class="crew__img"
               src="./assets/crew/image-douglas-hurley.webp"
-              alt="crew__img"
+              alt="Portrait of Douglas Hurley"
             />
           </div>
         </div>

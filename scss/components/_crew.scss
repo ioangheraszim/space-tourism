@@ -59,9 +59,16 @@
   &__image {
     // image
     margin: u.rem(24);
+    animation: fade-in 300ms;
 
     img {
       margin-inline: auto;
+      @include u.breakpoint(desktop) {
+        width: u.rem(540);
+        height: u.rem(734);
+        object-fit: contain;
+        margin-left: auto;
+      }
     }
   }
 }

@@ -15,60 +15,101 @@
   </head>
   <body class="background--tech">
     <header class="container header">
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary navigation">
         <div class="nav__logo-container">
-          <a href="/"
-            ><img class="nav__logo" src="./assets/shared/logo.svg" alt=""
-          /></a>
-          <div class="nav__line"></div>
+          <a href="/" aria-label="Homepage">
+            <img
+              class="nav__logo"
+              src="./assets/shared/logo.svg"
+              alt="Space Tourism logo"
+            />
+          </a>
+          <div class="nav__line" aria-hidden="true"></div>
         </div>
-        <ul class="nav__list u-uppercase">
-          <li class="nav__item">
-            <button class="btn btn-close">
-              <img src="./assets/shared/icon-close.svg" alt="" />
+        <ul class="nav__list u-uppercase" role="menubar">
+          <li class="nav__item" role="none">
+            <button class="btn btn-close" aria-label="Close navigation menu">
+              <img
+                src="./assets/shared/icon-close.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="/"
-              ><span class="nav-index">00</span> Home</a
-            >
+          <li class="nav__item" role="none">
+            <a class="nav__link" href="/" role="menuitem" aria-current="page">
+              <span class="nav-index" aria-hidden="true">00</span> Home
+            </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="./destination.html"
-              ><span class="nav-index">01</span> Destination</a
-            >
+          <li class="nav__item" role="none">
+            <a class="nav__link" href="./destination.html" role="menuitem">
+              <span class="nav-index" aria-hidden="true">01</span> Destination
+            </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="/crew.html"
-              ><span class="nav-index">02</span> Crew</a
-            >
+          <li class="nav__item" role="none">
+            <a class="nav__link" href="/crew.html" role="menuitem">
+              <span class="nav-index" aria-hidden="true">02</span> Crew
+            </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="/technology.html"
-              ><span class="nav-index">03</span> Technology</a
-            >
+          <li class="nav__item" role="none">
+            <a class="nav__link" href="/technology.html" role="menuitem">
+              <span class="nav-index" aria-hidden="true">03</span> Technology
+            </a>
           </li>
         </ul>
-        <button class="btn btn-open">
-          <img src="./assets/shared/icon-hamburger.svg" alt="" />
+        <button class="btn btn-open" aria-label="Open navigation menu">
+          <img
+            src="./assets/shared/icon-hamburger.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </button>
       </nav>
     </header>
     <main class="container">
-      <section class="tech">
-        <h2 class="tech__heading subheading u-align-center-mobile">
-          <span class="page-index">03</span>Space launch 101
+      <section class="tech" aria-labelledby="tech-heading">
+        <h2
+          id="tech-heading"
+          class="tech__heading subheading u-align-center-mobile"
+        >
+          <span class="page-index" aria-hidden="true">03</span>
+          Space launch 101
         </h2>
         <div class="tech__content u-align-center-desktop">
           <div class="tech__info">
-            <div class="tech__btn">
-              <button class="btn btn--paging is-active">1</button>
-              <button class="btn btn--paging">2</button>
-              <button class="btn btn--paging">3</button>
+            <div
+              class="tech__btn"
+              role="tablist"
+              aria-label="Technology selector"
+            >
+              <button
+                class="btn btn--paging is-active"
+                role="tab"
+                aria-selected="true"
+                aria-label="Launch vehicle"
+              >
+                1
+              </button>
+              <button
+                class="btn btn--paging"
+                role="tab"
+                aria-selected="false"
+                aria-label="Spaceport"
+              >
+                2
+              </button>
+              <button
+                class="btn btn--paging"
+                role="tab"
+                aria-selected="false"
+                aria-label="Space capsule"
+              >
+                3
+              </button>
             </div>
             <div class="tech__text">
               <h2 class="tech__term u-uppercase category">The Terminology</h2>
-              <h1 class="tech__head u-uppercase heading--m">Launch Vechicle</h1>
+              <h1 class="tech__head u-uppercase heading--m">Launch Vehicle</h1>
               <p class="tech__body body text-accent">
                 A launch vehicle or carrier rocket is a rocket-propelled vehicle
                 used to carry a payload from Earth's surface to space, usually
@@ -79,7 +120,7 @@
             </div>
           </div>
           <div class="tech__img">
-            <figure class="">
+            <figure>
               <picture>
                 <source
                   media="(min-width: 1440px)"
@@ -93,7 +134,7 @@
                 />
                 <img
                   src="./assets/technology/image-launch-vehicle-portrait.jpg"
-                  alt=""
+                  alt="Illustration of a launch vehicle"
                 />
               </picture>
             </figure>

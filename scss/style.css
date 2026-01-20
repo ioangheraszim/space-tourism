@@ -718,9 +718,19 @@ a {
 }
 .crew__image {
   margin: 1.5rem;
+  animation: fade-in 300ms;
 }
 .crew__image img {
   margin-inline: auto;
+}
+@media (min-width: 90em) {
+  .crew__image img {
+    width: 33.75rem;
+    height: 45.875rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-left: auto;
+  }
 }
 
 .tech {
@@ -772,4 +782,45 @@ a {
 }
 .tech__img img {
   margin-inline: auto;
+}
+
+.fade-in {
+  animation: fade-in 450ms ease-in forwards;
+}
+
+.fade-left {
+  animation: fade-left 450ms ease-in forwards;
+}
+
+.fade-top {
+  animation: fade-top 450ms ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-top {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }/*# sourceMappingURL=style.css.map */

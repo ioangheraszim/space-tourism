@@ -63,6 +63,22 @@ function initDestination(data) {
     statValues[0].textContent = myData.distance;
     statLabels[1].textContent = "Est. travel time";
     statValues[1].textContent = myData.travel;
+
+    // animations
+
+    destinationTitle.classList.remove("fade-in");
+    destinationText.classList.remove("fade-in");
+    statLabels.forEach((label) => label.classList.remove("fade-in"));
+    statValues.forEach((value) => value.classList.remove("fade-in"));
+    destinationImg.classList.remove("fade-in");
+
+    void destinationImg.offsetWidth;
+
+    destinationTitle.classList.add("fade-in");
+    destinationText.classList.add("fade-in");
+    statLabels.forEach((label) => label.classList.add("fade-in"));
+    statValues.forEach((value) => value.classList.add("fade-in"));
+    destinationImg.classList.add("fade-in");
   }
 
   setupButtons(btnTabs, destinationData);
@@ -84,9 +100,29 @@ function initCrew(data) {
     crewCategory.textContent = myData.role;
     crewBio.textContent = myData.bio;
     crewPic.src = myData.images.webp;
+
+    // animations
+
+    crewName.classList.remove("fade-left");
+    crewCategory.classList.remove("fade-left");
+    crewBio.classList.remove("fade-left");
+    crewPic.classList.remove("fade-in");
+
+    void crewPic.offsetWidth;
+
+    crewName.classList.add("fade-left");
+    crewCategory.classList.add("fade-left");
+    crewBio.classList.add("fade-left");
+    crewPic.classList.add("fade-in");
   }
 
   setupButtons(btnPills, crewData);
+
+  let currentIndex = 0;
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % btnPills.length;
+    btnPills[currentIndex].click();
+  }, 4000);
 }
 
 // handle tech data
@@ -103,6 +139,7 @@ function initTech(data) {
     const sources = picture.querySelectorAll("source");
     const img = picture.querySelector("img");
 
+    // Update content
     techName.textContent = myData.name;
     techTerm.textContent = "The Terminology";
     techBio.textContent = myData.description;
@@ -110,6 +147,22 @@ function initTech(data) {
     sources[0].srcset = myData.images.portrait;
     sources[1].srcset = myData.images.landscape;
     img.src = myData.images.portrait;
+
+    // Remove animation classes
+    techName.classList.remove("fade-top");
+    techTerm.classList.remove("fade-top");
+    techBio.classList.remove("fade-top");
+    img.classList.remove("fade-in");
+
+    // Force reflow (IMPORTANT)
+    void img.offsetWidth;
+
+    // Add animation classes
+    techName.classList.add("fade-top");
+    techTerm.classList.add("fade-top");
+    techBio.classList.add("fade-top");
+    img.classList.add("fade-in");
   }
+
   setupButtons(btnPaging, techData);
 }
