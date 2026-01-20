@@ -82,16 +82,16 @@ a {
 // background utilities
 
 .background--home {
-  background-image: url(../../assets/home/background-home-mobile.jpg);
+  background-image: url(../assets/home/background-home-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 
   @include u.breakpoint(tablet) {
-    background-image: url(../../assets/home/background-home-tablet.jpg);
+    background-image: url(../assets/home/background-home-tablet.jpg);
   }
 
   @include u.breakpoint(desktop) {
-    background-image: url(../../assets/home/background-home-desktop.jpg);
+    background-image: url(../assets/home/background-home-desktop.jpg);
   }
 }
 
